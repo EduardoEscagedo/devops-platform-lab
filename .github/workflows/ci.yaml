@@ -4,9 +4,21 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'apps/**'
+      - 'tests/**'
+      - 'Dockerfile'
+      - 'requirements.txt'
+      - '.github/workflows/ci.yml'
   pull_request:
     branches:
       - main
+    paths:
+      - 'app/**'
+      - 'tests/**'
+      - 'Dockerfile'
+      - 'requirements.txt'
+      - '.github/workflows/ci.yml'
 
 permissions:
   contents: read

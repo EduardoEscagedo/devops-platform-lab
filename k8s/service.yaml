@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2026-10-19T09:12:53Z"
+  labels:
+    app: devops-lab-api
+  name: devops-lab-api
+  namespace: devops-lab
+spec:
+  clusterIP: 10.102.132.91
+  clusterIPs:
+  - 10.102.132.91
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: devops-lab-api
+  sessionAffinity: None
+  type: ClusterIP

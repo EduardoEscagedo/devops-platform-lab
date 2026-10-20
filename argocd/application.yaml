@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/EduardoEscagedo/devops-platform-lab.git
     targetRevision: main
-    path: k8s
+    path: k8s/overlays/legacy
 
   destination:
     server: https://kubernetes.default.svc
@@ -17,5 +17,5 @@ spec:
 
   syncPolicy:
     automated:
-      prune: true
+      prune: false
       selfHeal: true

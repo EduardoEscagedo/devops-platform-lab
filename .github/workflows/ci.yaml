@@ -68,7 +68,7 @@ jobs:
           docker build -t ghcr.io/eduardoescagedo/devops-platform-lab:${{ github.sha }} .
 
       - name: Publicar imagen en GHCR
-	if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           docker push ghcr.io/eduardoescagedo/devops-platform-lab:${{ github.sha }}
 

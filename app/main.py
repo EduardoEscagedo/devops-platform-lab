@@ -1,8 +1,9 @@
+import os
 from fastapi import FastAPI
 
 app = FastAPI(
     title="DevOps Platform Lab",
-    version="1.0.0"
+    version="2.0.0"
 )
 
 @app.get("/")
@@ -21,4 +22,12 @@ def health():
 def ready():
     return {
         "status": "ready"
+    }
+
+@app.get("/version")
+def version():
+    return {
+        "application": "devops-platform-lab",
+        "version": "2.0.0",
+        "environment": os.getenv("ENVIRONMENT", "unknown")
     }

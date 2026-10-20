@@ -16,3 +16,11 @@ def test_ready():
 
     assert response.status_code == 200
     assert response.json() == {"status": "ready"}
+
+
+def test_version():
+    response = client.get("/version")
+
+    assert response.status_code == 200
+    assert response.json()["version"] == "2.0.0"
+    assert response.json()["application"] == "devops-platform-lab"

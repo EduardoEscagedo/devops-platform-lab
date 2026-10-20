@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: devops-staging
+  name: devops-production
   namespace: argocd
 spec:
   project: default

@@ -4,12 +4,13 @@ on:
   push:
     branches:
       - main
+      - 'feature/**'
     paths:
-      - 'apps/**'
+      - 'app/**'
       - 'tests/**'
       - 'Dockerfile'
       - 'requirements.txt'
-      - '.github/workflows/ci.yml'
+      - '.github/workflows/ci.yaml'
   pull_request:
     branches:
       - main
@@ -18,7 +19,7 @@ on:
       - 'tests/**'
       - 'Dockerfile'
       - 'requirements.txt'
-      - '.github/workflows/ci.yml'
+      - '.github/workflows/ci.yaml'
 
 permissions:
   contents: read

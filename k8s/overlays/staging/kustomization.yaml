@@ -9,3 +9,7 @@ namespace: devops-lab-staging
 replicas:
   - name: devops-lab-api
     count: 1
+
+images:
+  - name: ghcr.io/eduardoescagedo/devops-platform-lab
+    newTag: c9b55228e4b9b69bdd54bb0ae7bc20d9b5ed0da5

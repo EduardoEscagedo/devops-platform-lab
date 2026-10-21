@@ -9,3 +9,7 @@ namespace: devops-lab-production
 replicas:
   - name: devops-lab-api
     count: 3
+
+images:
+  - name: ghcr.io/eduardoescagedo/devops-platform-lab
+    newTag: b6de0f9ba7ecab49008a6b9dca28e381f9e327b8

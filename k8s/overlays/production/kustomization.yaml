@@ -2,14 +2,15 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../../base
+- ../../base
 
 namespace: devops-lab-production
 
 replicas:
-  - name: devops-lab-api
-    count: 3
+- count: 3
+  name: devops-lab-api
 
 images:
-  - name: ghcr.io/eduardoescagedo/devops-platform-lab
-    newTag: b6de0f9ba7ecab49008a6b9dca28e381f9e327b8
+- name: ghcr.io/eduardoescagedo/devops-platform-lab
+  newName: ghcr.io/eduardoescagedo/devops-platform-lab
+  newTag: bdcbe9ebc07321f2ebf534e93c2af712dc3fec86
